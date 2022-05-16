@@ -1,9 +1,15 @@
-<div class="machine">
-  <div class="top">
-    <span class="material-icons"> loop </span>
+<div class="machine" [ngClass]="machine.state">
+  <div class="status">
+    <span class="material-icons state"> {{findStateIcon(machine)}} </span>
   </div>
-
-  <span class="material-icons"> system_update_alt </span>
-  <p>{{machine.name}}</p>
-  asd
+  <div class="type">
+    <span         [class]="
+    machine.name === 'Packer'
+      ? 'material-icons-outlined md-48'
+      : 'material-icons md-48'
+  "> {{findMachineIcon(machine)}} </span>
+  </div>
+  <div class="name">
+    <p>{{ machine.name }}</p>
+  </div>
 </div>

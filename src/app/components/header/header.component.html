@@ -1,11 +1,15 @@
-<header class="header">
+<header>
   <div class="logo">
     <img src="assets/buhler-logo.png" alt="" />
   </div>
   <div class="info-right">
     <div class="date">
-      <span class="material-icons"> schedule </span>
-      {{ getDate() }}
+      <div class="icon">
+        <span class="material-icons"> schedule </span>
+      </div>
+      <div class="date-hour">
+        {{ getDate() }}
+      </div>
     </div>
     <div class="operator">
       <span class="material-icons"> account_circle </span>

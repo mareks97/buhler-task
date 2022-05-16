@@ -19,18 +19,21 @@ img {
     justify-content: end;
     width: 100%;
     margin-right:30px;
-    align-content: center;
 }
 
 .date {
     display: flex;
-    align-self: center;
+    align-content: center;
     margin-right: 50px;
 
+}
+.date-hour, .icon {
+    align-self: center;
 }
 
 .material-icons {
     margin: auto 8px;
+    text-align: center;
 }
 
 .operator {

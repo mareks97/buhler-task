@@ -1,8 +1,14 @@
 <div class="navigation">
-    <ul class="list">
-        <li *ngFor="let machine of machines">
-            <a href="#">hello</a>
-        </li>
+  <ul class="list">
+    <li *ngFor="let machine of machines" [ngClass]="machine.state">
+      <!-- added and hidden just for styling purposes -->
+      <div class="dummy">
+        <span class="material-icons">{{ findStateIcon(machine) }}</span>
+      </div>
 
-    </ul>
+      <a href="#">{{ machine.name }}</a>
+      <span class="material-icons">{{ findStateIcon(machine) }}</span>
+
+    </li>
+  </ul>
 </div>

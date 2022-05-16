@@ -16,8 +16,8 @@ export class OverviewComponent implements OnInit {
   ngOnInit(): void {
     this.machineService
       .getData()
-      .subscribe((res: Machine[]) => {
-        this.machines = Object.values(res);
+      .subscribe((res: any) => {
+        this.machines = res.machines;
         console.log(this.machines);
       });
   }
