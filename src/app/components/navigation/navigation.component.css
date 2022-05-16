@@ -5,7 +5,7 @@
   display: flex;
 }
 
-li {
+.items-list {
   display: flex;
 
   height: 100%;
@@ -30,7 +30,8 @@ a {
 }
 
 .warning {
-  background-color: #F72C25;
+  background-color: #f72c25;
+  
 }
 
 .alarm {

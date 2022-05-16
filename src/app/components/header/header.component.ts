@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  date: string = '';
+
+  selected: string = "Operator"
   constructor() {}
 
   ngOnInit(): void {}
+
+  changeSelected(selected:string) {
+    this.selected = selected
+  }
 
   getDate() {
     var d = new Date();

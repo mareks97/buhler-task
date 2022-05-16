@@ -2,27 +2,23 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Machine } from 'src/app/Machine';
 import { MachinesService } from 'src/app/services/machines.service';
 
-
 @Component({
   selector: 'app-machine',
   templateUrl: './machine.component.html',
   styleUrls: ['./machine.component.css'],
 })
 export class MachineComponent implements OnInit {
+  @Input() machine!: Machine;
 
-  @Input() machine!:Machine
-  constructor(private machinesService:MachinesService) {}
+  constructor(private machinesService: MachinesService) {}
 
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-
+  findStateIcon(machine: Machine) {
+    return this.machinesService.getStateIcon(machine);
   }
 
-  findStateIcon(machine:Machine) {
-    return this.machinesService.getStateIcon(machine)
-  }
-
-  findMachineIcon(machine:Machine) {
-    return this.machinesService.getMachineIcon(machine)
+  findMachineIcon(machine: Machine) {
+    return this.machinesService.getMachineIcon(machine);
   }
 }

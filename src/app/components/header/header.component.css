@@ -16,18 +16,18 @@ img {
 
 .info-right {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     width: 100%;
     margin-right:30px;
 }
 
 .date {
     display: flex;
-    align-content: center;
+    align-items: center;
     margin-right: 50px;
 
 }
-.date-hour, .icon {
+.date-hour{
     align-self: center;
 }
 
@@ -39,4 +39,9 @@ img {
 .operator {
     display: flex;
     align-self: center;
+}
+
+button {
+    padding-left: 2px;
+    padding-right: 2px;
 }

@@ -1,6 +1,6 @@
 <div class="navigation">
   <ul class="list">
-    <li *ngFor="let machine of machines" [ngClass]="machine.state">
+    <li *ngFor="let machine of machines" [ngClass]="machine.state" class="items-list">
       <!-- added and hidden just for styling purposes -->
       <div class="dummy">
         <span class="material-icons">{{ findStateIcon(machine) }}</span>
@@ -11,4 +11,5 @@
 
     </li>
   </ul>
+  
 </div>
