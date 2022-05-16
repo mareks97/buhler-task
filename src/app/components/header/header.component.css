@@ -1,0 +1,39 @@
+header {
+  background-color: lightgray;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-bottom: 7px solid rgba(0,168,156,255);
+  width: 100%;
+}
+
+img {
+  max-height: 40px;
+  margin-left: 10px;
+}
+
+.info-right {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-right:30px;
+    align-content: center;
+}
+
+.date {
+    display: flex;
+    align-self: center;
+    margin-right: 50px;
+
+}
+
+.material-icons {
+    margin: auto 8px;
+}
+
+.operator {
+    display: flex;
+    align-self: center;
+}
