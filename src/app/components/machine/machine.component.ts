@@ -9,6 +9,7 @@ import { MachinesService } from 'src/app/services/machines.service';
 })
 export class MachineComponent implements OnInit {
   @Input() machine!: Machine;
+  @Input() index!: number;
 
   constructor(private machinesService: MachinesService) {}
 

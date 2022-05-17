@@ -1,7 +1,9 @@
-
 <div class="machine-list">
-  <app-machine *ngFor="let machine of machines" [machine]="machine" class="machine-item">
-      
+  <app-machine
+    *ngFor="let machine of machines; let i = index"
+    [machine]="machine"
+    [index]="i"
+    class="machine-item"
+  >
   </app-machine>
-  
 </div>

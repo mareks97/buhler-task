@@ -1,3 +1,4 @@
+import { getLocaleDateTimeFormat } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,33 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-
-  selected: string = "Operator"
+  date!: Date;
+  selected: string = 'Operator';
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    setInterval(() => {
+      this.getDate();
+    }, 1000);
+  }
 
-  changeSelected(selected:string) {
-    this.selected = selected
+  changeSelected(selected: string) {
+    this.selected = selected;
   }
 
   getDate() {
     var d = new Date();
-    var datestring =
-      d.getDate() +
-      '.' +
-      (d.getMonth() + 1) +
-      '.' +
-      d.getFullYear() +
-      ' ' +
-      this.formatTwoDigits(d.getHours()) +
-      ':' +
-      this.formatTwoDigits(d.getMinutes());
-
-      return datestring
+    this.date = d;
   }
-  
-  formatTwoDigits(n:number) {
-  return n < 10 ? '0' + n : n;
-}
 }

@@ -4,18 +4,21 @@
   </div>
   <div class="info-right">
     <div class="date">
-
-        <span class="material-icons"> schedule </span>
+      <span class="material-icons"> schedule </span>
 
       <div class="date-hour">
-        {{ getDate() }}
+        {{ date | date: "dd.MM.yyyy hh:mm" }}
       </div>
     </div>
 
     <div class="operator">
       <span class="material-icons"> account_circle </span>
+
       <div class="menu">
-        <button mat-button [matMenuTriggerFor]="menu">{{ selected }}</button>
+        <button mat-button [matMenuTriggerFor]="menu" class="dropdown">
+          {{ selected }}
+          <span class="material-symbols-outlined"> arrow_drop_down </span>
+        </button>
         <mat-menu #menu="matMenu">
           <button mat-menu-item (click)="changeSelected('Operator')">
             Operator

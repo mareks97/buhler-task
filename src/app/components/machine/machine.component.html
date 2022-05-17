@@ -1,15 +1,21 @@
-<div class="machine" [ngClass]="machine.state">
-  <div class="status">
-    <span class="material-icons state"> {{findStateIcon(machine)}} </span>
-  </div>
-  <div class="type">
-    <span         [class]="
-    machine.name === 'Packer'
+<div class="lines">
+
+  <div class="line"></div>
+  <div class="machine" [ngClass]="[machine.state, index==0 ? '' : 'not-first']">
+    <div class="status">
+      <span class="material-icons state"> {{findStateIcon(machine)}} </span>
+    </div>
+    <div class="type">
+      <span         [class]="
+      machine.name === 'Packer'
       ? 'material-icons-outlined md-48'
       : 'material-icons md-48'
-  "> {{findMachineIcon(machine)}} </span>
+      "> {{findMachineIcon(machine)}} </span>
+    </div>
+    <div class="name">
+      <p>{{ machine.name }}</p>
+    </div>
   </div>
-  <div class="name">
-    <p>{{ machine.name }}</p>
-  </div>
+
 </div>
+

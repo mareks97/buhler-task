@@ -8,6 +8,7 @@
   padding: 10px;
   width: 100px;
   border-radius: 5px;
+  z-index: 10;
 }
 
 .status {
@@ -31,18 +32,42 @@ p {
 .material-icons.md-48,
 .material-icons-outlined.md-48 {
   font-size: 48px;
+
 }
 
 .warning {
   background-color: #f72c25;
-  color: white !important;
+  color: white;
+  z-index: 10;
 }
 
 .alarm {
   background-color: orange;
-  color: white !important;
+  color: white;
 }
 
 .alarm *, .warning * {
     color: white;
 }
+
+
+
+.not-first::after {
+  content: '';
+  position: relative;
+  background-color: green;
+  width: 40px;
+  height: 5px;
+  bottom: 50%;
+  left: -50%;
+
+  z-index: 1;
+}
+
+
+
+.lines{
+  display: flex;
+}
+
+
